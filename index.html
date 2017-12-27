@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flickr fed exercise</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<script src="https://code.angularjs.org/1.2.0/angular.js"></script>	
+	<script src="app.js"></script>		
+  </head>
+  <body>
+	<section class="row" ng-app="formFlickr" ng-controller="FlickrController">
+
+
+	  <!-- HTML5-specific element -->
+		<article class="col-md-push-1 col-md-11">
+			<h1>Flickr web-app that fetches images</h1>
+			<div class="container">				
+				<div class="container">
+					<div class="app-container">
+						<fieldset class="app-fieldset">
+						<legend class="app-legend">
+						 Enter Search Key
+						</legend>
+						<form name="form" class="validate-form">
+						  <input id="searchCriteria"
+								 ng-model="searchCriteria.tags"
+								 ng-target="form.tags"
+								 name="tags"
+								 type="text"
+								 title="required input"
+								 placeholder="Enter key words (tags) separated by a comma."
+								 ng-keyup="search(searchCriteria);document.getElementsByName('tags').focus();"
+								 required />
+						  <br />
+						  Search Mode:
+						  <input type="radio" name="SearchMode" value="any" />Any Tags
+						  <input type="radio" name="SearchMode" value="all" checked />All Tags
+						  <br />
+						  <input type="button" class="btn btn-default" ng-click="resetForm(form);" value="Reset" />
+						  <button type="submit" class="btn btn-primary" ng-click="search(searchCriteria);document.getElementsByName('tags').focus();">
+							Search Flicker
+						  </button>
+						</form>
+					  </fieldset>
+					</div>
+					<div  ng-show="showSelectedImage">
+						<fieldset class="app-fieldset">	
+						<legend class="app-legend">
+						  More details of selected image
+						</legend>					
+						<table>
+							<tbody>
+								<tr>
+									<th>Title</th>
+									<td>{{title}}</td>
+								</tr>
+								<tr>
+									<th>Author</th>
+									<td>{{author}}</td>
+								</tr>
+								<tr>
+									<th>Tags</th>
+									<td>{{tags}}</td>
+								</tr>
+								<tr>
+									<th>Link to image of original resolution. (Right-click to open in new tab)</th>
+									<td><a href="{{image}}">{{title}}</a></td>
+								</tr>
+							</tbody>
+						</table> 
+						</fieldset>
+					</div>			
+				</div>
+			</div>
+			
+			<div id="message"></div>
+			<div id="images" class="app-container">
+			  <h3 ng-show="images.items.length > 0">
+				{{images.title}}
+			  </h3>
+			  <figure class="added-fig" ng-repeat="i in images.items">
+				<img class="added-img" src="{{i.media.m}}" ng-click="clickAnImage(i);"/> 			
+			  </figure>
+			</div>
+		</article> 
+	</section>
+  </body>
+</html>
