@@ -12,8 +12,9 @@
 	<script src="app.js"></script>		
 </head>
 <body>
-<section  ng-app="formFlickr" ng-controller="FlickrController">
 <div class="container-fluid">
+<section  ng-app="formFlickr" ng-controller="FlickrController">
+
 
     <div class="col-sm-4" style="background-color:lavenderblush;">
        <h1>Flickr web-app that fetches imagesasdfsd</h1>
@@ -32,9 +33,9 @@
 						</form>
 				</div> 
   
-    <div class="col-sm-8" style="background-color:lavender;">
+    <div class="col-sm-8" style="background-color:lavender;align:center;">
     
-        <div id="images" >
+        <div id="images" class="images" align="center">
 			  <h3 ng-show="images.items.length > 0">
 				{{images.title}}
               </h3>
@@ -42,19 +43,17 @@
             <div class="row" >
                             <img class="added-img" src="{{i.media.m}}" ng-click="clickAnImage(i);"/> 
                       
-                                   <p>{{i.author}}</p>
-						<p>{{i.tags}}</p>
-					<p><a href="{{i.link}}">{{i.title}}</a></p>
+                                   <p align="left">Auther : {{i.author}}</p>
+						<p align="left"><p align="left" >Tags : {{i.tags}}</p></p>
+					<p align="left"><a href="{{i.link}}">Image URL : {{i.title}}</a></p>
                             </div>
                            
                 </div>		
 		
 			</div>
-		</div>
-    </div>
-  
+		</div>  
 </section>
-
+	</div>
 </body>
 </html>
 
