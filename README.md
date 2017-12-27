@@ -1,11 +1,9 @@
+# Live Demo 
+
+https://angularexercise.000webhostapp.com/
+
 # Search Flickr with AngularJS
 An Application to Search Flickr with AngularJS as user interface.
-
-
-## Supported web browsers
-The application has been tested with following browsers with side-effect:
-Google Chrome: ver 62.0.3202.94 (64-bit)
-Firefox: ver 57.0 (32-bit)
 
 # Technologies in use
 
@@ -30,5 +28,3 @@ Following properties have been used:
 
 # Technical note
    - Just for practice
-
-
