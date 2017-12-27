@@ -29,8 +29,6 @@ Following properties have been used:
    - -o-transition	
 
 # Technical note
-
-
-
+   - Just for practice
 
 
