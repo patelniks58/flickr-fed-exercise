@@ -8,7 +8,7 @@
 
   .added-fig {
     margin: 5px;
-    display: inline-block;
+    display: inline;
   }
 
   .added-img {
@@ -138,8 +138,4 @@ table, td, th {
 th {
 	width: 250px;
 	style: "text-align:right";
-}
-
-.container {
-    display: flex;
 }
