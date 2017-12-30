@@ -1,6 +1,8 @@
 # Live Demo 
 
-https://angularexercise.000webhostapp.com/
+
+<a href="https://angularexercise.000webhostapp.com/"> DEMO </a>
+
 
 # Search Flickr with AngularJS
 An Application to Search Flickr with AngularJS as user interface.
